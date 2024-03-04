@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar</title>
+  <style>
+    body {
+      margin: 15;
+      font-family: Arial, sans-serif;
+      background-color:orange;
+    }
+    .navbar {
+      background-color: orange;
+      display: flex;
+      justify-content: center;
+    }
+    .navbar__item {
+      flex: 1;
+      background-color: black;
+      text-align: center;
+      padding: 10px;
+      color: white;
+    }
+    .navbar__item--home {
+      border-right: 1px solid white;
+    }
+    .navbar__item--tutorials {
+      position: relative;
+    }
+    .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: lightblue;
+      width: 100%;
+    }
+    .navbar__item--tutorials:hover .sub-menu {
+      display: block;
+    }
+    .sub-menu__item {
+      background-color: blue;
+    }
+    .sub-menu__item--web-design {
+      background-color: lightblue;
+      position: relative;
+    }
+    .sub-menu__item--web-design:hover .sub-sub-menu {
+      display: block;
+    }
+    .sub-sub-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: purple;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbaritem navbaritem--home">Home</div>
+    <div class="navbaritem navbaritem--tutorials">
+      Tutorials
+      <div class="sub-menu">
+        <div class="sub-menu__item">Photoshop</div>
+        <div class="sub-menu__item">Illustrator</div>
+        <div class="sub-menuitem sub-menuitem--web-design">
+          Web Design
+          <div class="sub-sub-menu">
+            <div class="sub-menu__item" style="background-color: purple;">HTML</div>
+            <div class="sub-menu__item" style="background-color: purple;">CSS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar__item">Articles</div>
+    <div class="navbar__item">Inspiration</div>
+  </nav>
+</body>
+</html>
+<!--  -->
