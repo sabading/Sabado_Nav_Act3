@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: orange;
+    }
+    .navbar {
+      background-color: orange;
+      display: flex;
+      padding: 5px;
+    }
+    .navbar__item {
+      flex: 1;
+      background-color: black;
+      text-align: center;
+      color: white;
+    }
+    .navbar__item--home,
+    .navbar__item--tutorials {
+      padding: 5px;
+    }
+    .navbar__item-content {
+      padding: 10px;
+    }
+    .navbar__item--tutorials {
+      position: relative;
+    }
+    .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: lightblue;
+      width: 100%;
+    }
+    .navbar__item--tutorials:hover .sub-menu {
+      display: block;
+    }
+    .sub-menu__item {
+      background-color: blue;
+    }
+    .sub-menu__item--web-design {
+      background-color: blue;
+      position: relative;
+    }
+    .sub-sub-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: purple;
+    }
+    .sub-menu__item--web-design:hover .sub-sub-menu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__item navbar__item--home"><div class="navbar__item-content">Home</div></div>
+    <div class="navbar__item navbar__item--tutorials">
+      <div class="navbar__item-content">Tutorials</div>
+      <div class="sub-menu">
+        <div class="sub-menu__item">Photoshop</div>
+        <div class="sub-menu__item">Illustrator</div>
+        <div class="sub-menu__item sub-menu__item--web-design">
+          Web Design
+          <div class="sub-sub-menu">
+            <div class="sub-menu__item">HTML</div>
+            <div class="sub-menu__item">CSS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar__item"><div class="navbar__item-content">Articles</div></div>
+    <div class="navbar__item"><div class="navbar__item-content">Inspiration</div></div>
+  </nav>
+</body>
+</html>
